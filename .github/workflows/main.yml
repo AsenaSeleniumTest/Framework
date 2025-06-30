@@ -22,7 +22,7 @@ jobs:
      - name: Install dependencies
        run: |
          python3 -m pip install --upgrade pip
-         pip install -r requirements.txt
+         pip install -r /home/runner/work/Framework/Framework/requirements.txt
      - name: execute tests
        run: pytest Tests/ --html=TestReport/testreport1.html -v -s -n 2
      - name: Display Python version

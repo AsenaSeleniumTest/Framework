@@ -20,7 +20,7 @@ jobs:
          pip install --upgrade pip
          pip install -r requirements.txt
      - name: execute tests
-       run: pytest --html=TestReport/testreport1.html -v -s -n 2
+       run: pytest --html=TestReport/testreport1.html -v -s
      - name: Display Python version
        run: python3 -c "import sys; print(sys.version)"          
      

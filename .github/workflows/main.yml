@@ -17,10 +17,10 @@ jobs:
          python-version: '3.13'
      - name: Install dependencies
        run: |
-         cd /home/runner/work/Framework/Framework/
+         pip install --upgrade pip
          pip install -r requirements.txt
      - name: execute tests
-       run: pytest Tests/ --html=TestReport/testreport1.html -v -s -n 2
+       run: pytest --html=TestReport/testreport1.html -v -s -n 2
      - name: Display Python version
        run: python3 -c "import sys; print(sys.version)"          
      

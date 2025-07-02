@@ -5,6 +5,7 @@ from Pages.HomePage import HomePage
 @pytest.mark.usefixtures("driver_setup")
 class Test_Home_Page:
     """class to test home page for items in sale"""
+    
     @pytest.mark.smoke
     def test_list_articles(self,driver_setup):
         """Test the list of available articles"""

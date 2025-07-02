@@ -7,18 +7,20 @@ on:
       - main
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest       
     name: Add steps to run
     steps:
      - uses: actions/checkout@v4.2.2
      - name: python set up 
        uses: actions/setup-python@v5
+       with:
+         python-version: '3.13'
      - name: Install dependencies
        run: |
-         python3 -m pip install --upgrade pip
+         cd /home/runner/work/Framework/Framework/
          pip install -r requirements.txt
      - name: execute tests
-       run: pytest Tests/ --html=/TestReport/testreport1.html -v -s -n 2
+       run: pytest Tests/ --html=TestReport/testreport1.html -v -s -n 2
      - name: Display Python version
        run: python3 -c "import sys; print(sys.version)"          
      

@@ -5,7 +5,7 @@ from Pages.HomePage import HomePage
 @pytest.mark.usefixtures("driver_setup")
 class Test_Home_Page:
     """class to test home page for items in sale"""
-    
+    @pytest.mark.smoke
     def test_list_articles(self,driver_setup):
         """Test the list of available articles"""
         article_list = ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]

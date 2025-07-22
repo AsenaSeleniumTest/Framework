@@ -1,6 +1,8 @@
+#! /usr/bin/env python3
 import pytest
 from Pages.LoginPage import LoginPage
 from Pages.HomePage import HomePage
+
 
 @pytest.mark.usefixtures("driver_setup")
 class Test_Home_Page:

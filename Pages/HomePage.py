@@ -1,5 +1,9 @@
+#! /usr/bin/env python3
+import Utils.Logger as lc
 from selenium.webdriver.common.by import By
 from Pages.LoginPage import LoginPage
+from Pages.BasePage import BasePage
+
 
 
 class HomePage(LoginPage):
@@ -10,10 +14,11 @@ class HomePage(LoginPage):
         self.list_articles = (By.XPATH,"//div[@class='inventory_item_name ']")
         self.list_description = (By.XPATH,"//div[@class='inventory_item_desc']")
         self.list_price = (By.XPATH,"inventory_item_price")
-    
+        
     
     def get_page_tittle(self):
         """Get the title of the page."""
+        
         return self.driver.find_element(*self.title_main).text
     
     def get_article_list(self):

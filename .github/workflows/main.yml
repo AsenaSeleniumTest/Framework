@@ -21,8 +21,8 @@ jobs:
          pip install -r requirements.txt
      - name: execute tests
        run: | 
-          cd /home/runner/work/Framework/Framework
-          pytest --tb=line -v -s -n 2 --html=TestReport/testreport1.html
+          
+          pytest -v -s -n 2 --html=TestReport/testreport1.html
      - name: Display Python version
        run: python3 -c "import sys; print(sys.version)"          
      

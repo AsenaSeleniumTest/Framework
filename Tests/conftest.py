@@ -6,13 +6,14 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
+config = ConfigParser()
+config.read('config.ini')
+url = config.get('basic info', 'url')
 
 @pytest.fixture(scope="class",params=["chrome"],autouse=True)
 def driver_setup(request):
     """Initialize the chrome driver."""
-    config = ConfigParser()
-    config.read('config.ini')
-    url = config.get('basic info', 'url')
+   
     if request.param == "chrome":
         service = Service(ChromeDriverManager().install())
         c_options = webdriver.ChromeOptions()

@@ -26,6 +26,7 @@ jobs:
           ls
           cd Tests
           pytest Test_login_page.py -v -n 2 --html=TestReport/testreport1.html
+          chmod 777 TestReport
      - name: Display Python version
        run: python3 -c "import sys; print(sys.version)"          
      

@@ -8,7 +8,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 config = ConfigParser()
 config.read('config.ini')
-url = config.get('basic info', 'url')
+url = "www.saucedemo.com"
 
 @pytest.fixture(scope="class",params=["chrome"],autouse=True)
 def driver_setup(request):

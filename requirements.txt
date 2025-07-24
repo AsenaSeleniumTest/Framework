@@ -3,3 +3,4 @@ selenium
 webdriver-manager
 pytest-xdist
 pytest-html
+configparser

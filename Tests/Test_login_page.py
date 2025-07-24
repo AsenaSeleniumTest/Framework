@@ -13,6 +13,7 @@ class Test_LoginPage:
         """Test login with valid credentials."""
         driver = driver_setup
         l_page = HomePage(driver)
+        
         l_page.d_logger.info("Starting login test with valid credentials.")
         l_page.login()
         page_title = l_page.get_page_tittle()

@@ -19,8 +19,10 @@ jobs:
        run: |
          pip install --upgrade pip
          pip install -r requirements.txt
-     - name: execute tests
-       run: | 
+     - name: Runt tests
+       uses: actions/checkout@v4.2.2 
+       if: success() || failure()
+     - run: | 
           
           pytest -v -s -n 2 --html=TestReport/testreport1.html
      - name: Display Python version

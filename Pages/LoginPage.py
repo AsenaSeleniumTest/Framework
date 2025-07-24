@@ -22,7 +22,7 @@ class LoginPage(BasePage):
     
     def login(self):
         """Login steps with valid credentials.  """        
-        user = self.get_user_list()        
+        user = self.get_user_list()
         self.driver.find_element(*self.username_field).send_keys(user)
         self.driver.find_element(*self.password_field).send_keys("secret_sauce")
         self.driver.find_element(*self.login_button).click()

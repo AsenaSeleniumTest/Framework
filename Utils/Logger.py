@@ -10,7 +10,7 @@ def get_debug_logger():
     d_logger = Logger.getLogger(__name__)
     d_logger.propagate = False  # Prevents the logger from propagating to the root logger
     d_logger.setLevel(Logger.INFO)
-    d_formater = Logger.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    d_formater = Logger.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(funcname)s -%(message)s')
     d_handler = Logger.FileHandler(path)
     d_handler.setFormatter(d_formater)
     d_logger.addHandler(d_handler)

@@ -23,7 +23,7 @@ jobs:
        uses: actions/checkout@v4.2.2 
        if: success() || failure()
      - run: | 
-          
+          ls
           pytest -v -s -n 2 --html=TestReport/testreport1.html
      - name: Display Python version
        run: python3 -c "import sys; print(sys.version)"          

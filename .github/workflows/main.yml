@@ -17,14 +17,15 @@ jobs:
          python-version: '3.13'
      - name: Install dependencies
        run: |
-         pip install --upgrade pip
+         python -m pip install --upgrade pip
          pip install -r requirements.txt
      - name: Runt tests
        uses: actions/checkout@v4.2.2 
        if: success() || failure()
      - run: | 
           ls
-          pytest -v -s -n 2 --html=TestReport/testreport1.html
+          cd Tests
+          pytest -v -n 2 --html=TestReport/testreport1.html
      - name: Display Python version
        run: python3 -c "import sys; print(sys.version)"          
      

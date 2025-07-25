@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import Utils.Logger as lc
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException

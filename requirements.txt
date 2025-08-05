@@ -4,3 +4,4 @@ webdriver-manager
 pytest-xdist
 pytest-html
 configparser
+pytest-asyncio

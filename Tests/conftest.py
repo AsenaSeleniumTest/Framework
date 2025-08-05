@@ -8,12 +8,12 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 config = ConfigParser()
 config.read('config.ini')
-url = "www.saucedemo.com"
+
 
 @pytest.fixture(scope="class",params=["chrome"],autouse=True)
 def driver_setup(request):
     """Initialize the chrome driver."""
-   
+    url = "https://www.saucedemo.com"
     if request.param == "chrome":
         service = Service(ChromeDriverManager().install())
         c_options = webdriver.ChromeOptions()
@@ -26,7 +26,7 @@ def driver_setup(request):
         driver.maximize_window()
         driver.get(url)
     else:
-        raise ValueError("Unsupported browser: {}".format(request.param))
+        raise ValueError("Unsupported browser: ".format(request.param))
     
     yield driver
     driver.quit()

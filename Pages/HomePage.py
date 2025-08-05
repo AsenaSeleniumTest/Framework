@@ -25,7 +25,6 @@ class HomePage(LoginPage):
     def add_to_cart_item(self, item_name):
         """Method to add the item to the cart."""
         self.load_site()
-        self.login()
         for index,product in enumerate(self.get_article_list()):
             if product.text == item_name:
                 self.get_buttons_add_to_cart_list()[index].click()

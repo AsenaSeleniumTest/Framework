@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "mssql": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:/Users/amigo/AppData/Local/Programs/Python/Python313/Scripts/mssql_mcp_server",
+        "run",
+        "mssql_mcp_server"
+      ],
+      "env": {
+        "MSSQL_DRIVER": "ODBC Driver 17 for SQL Server",
+        "MSSQL_HOST": "LORDUSBQ/USBQTEST1",
+        "MSSQL_USER": "amigo",
+        "MSSQL_PASSWORD": "1386",
+        "MSSQL_DATABASE": "AdventureWorks2016"
+      }
+    }
+  }
+}

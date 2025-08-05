@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 import pytest
+import asyncio
 import Utils.Logger as lc
 from Pages.LoginPage import LoginPage
 from Pages.HomePage import HomePage
